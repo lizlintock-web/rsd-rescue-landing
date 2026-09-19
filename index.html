@@ -226,8 +226,8 @@
       <p class="hook">"There are two kinds of RSD spirals, and the one that actually ruins your day gives you <span>zero warning.</span>"</p>
 
       <div class="cta-row">
-        <a href="https://books2read.com/u/3GDeQL" class="btn btn-primary" target="_blank" rel="noopener">Get it on Kindle</a>
-        <a href="https://books2read.com/u/3GDeQL" class="btn btn-secondary" target="_blank" rel="noopener">Paperback</a>
+        <a href="https://books2read.com/u/3GDeQL" class="btn btn-primary" target="_blank" rel="noopener" onclick="if(window.pintrk){pintrk('track','checkout',{lead_type:'Kindle button'});}">Get it on Kindle</a>
+        <a href="https://books2read.com/u/3GDeQL" class="btn btn-secondary" target="_blank" rel="noopener" onclick="if(window.pintrk){pintrk('track','checkout',{lead_type:'Paperback button'});}">Paperback</a>
       </div>
       <p class="fineprint">Available on Amazon · Also in paperback</p>
     </header>
@@ -304,7 +304,7 @@
       <h2>Start Day 1 tonight</h2>
       <p>21 short days. Real tools for the exact moments RSD used to win.</p>
       <div class="cta-row">
-        <a href="https://books2read.com/u/3GDeQL" class="btn btn-primary" target="_blank" rel="noopener">Get RSD Rescue on Amazon</a>
+        <a href="https://books2read.com/u/3GDeQL" class="btn btn-primary" target="_blank" rel="noopener" onclick="if(window.pintrk){pintrk('track','checkout',{lead_type:'Final CTA button'});}">Get RSD Rescue on Amazon</a>
       </div>
     </section>
 
@@ -313,19 +313,27 @@
     </footer>
   </div>
 
-  <!--
-    PINTEREST TAG — this page is hosted on claude.ai, which only allows scripts from a small
-    trusted list (cdnjs, jsdelivr, Tailwind, jQuery) for security. Pinterest's tag is served from
-    Pinterest's own domain, which is NOT on that list, so it will not fire here even if pasted in.
-    To track conversions from Pinterest Ads, host this exported HTML file on your own domain
-    (or a host like GitHub Pages/Netlify/Carrd), then paste Pinterest's tag snippet from
-    ads.pinterest.com right before the closing </body> tag there. It will work normally
-    on a self-hosted page since that CSP restriction is specific to claude.ai.
-  -->
+  <!-- Pinterest Tag -->
+  <script>
+  !function(e){if(!window.pintrk){window.pintrk = function () {
+  window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+    n=window.pintrk;n.queue=[],n.version="3.0";var
+    t=document.createElement("script");t.async=!0,t.src=e;var
+    r=document.getElementsByTagName("script")[0];
+    r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+  pintrk('load', '2612916312468');
+  pintrk('page');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://ct.pinterest.com/v3/?event=init&tid=2612916312468&noscript=1" />
+  </noscript>
+  <!-- End Pinterest Tag -->
 
   <script>
     document.getElementById('emailForm').addEventListener('submit', function(){
       var note = document.getElementById('formNote');
+      if (window.pintrk) { pintrk('track', 'lead'); }
       setTimeout(function(){
         note.textContent = "Thanks! Check your inbox for the worksheet.";
       }, 400);
